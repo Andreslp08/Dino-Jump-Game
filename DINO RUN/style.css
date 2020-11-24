@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+body{
+    background-color: #222;
+}
+.canvas{
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    background-color: rgb(0, 183, 255);
+    border-radius: 10px;
+}
+
+/* SCORE HUD */
+.scoreContainer{
+    position: absolute;
+    display: block;
+    white-space: nowrap;
+    width: 200px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scoreTitle{
+    font-family: 'Anton', sans-serif;
+    color: #ffee00;
+    display: block;
+    margin-top:10px ;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.score{
+    font-family: 'Anton', sans-serif;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+/* GAME OVER MENU */
+.containerGameOver{
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 500px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gameTitleMenu{
+    color: #ff0000;
+    margin-top: 20px;
+    font-size: 50px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+    font-family: 'Anton', sans-serif;
+    transition: all 0.3s ease 0s;
+}
+
+.gameOverScore{
+    color: #ffffff;
+    font-size: 20px;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+    font-family: 'Anton', sans-serif;
+    transition: all 0.3s ease 0s;
+}
+
+.containerGameOver .button{
+    display: inline-block;
+    margin: 10px;
+}
+/* BUTTONS */
+.button{
+    display: inline-block;
+    background-color: #ffffff;
+    width: 100px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-right: -10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+    transition:  all 0.3s ease 0s;
+}
+
+.button:disabled{
+    background-color: rgba(255, 255, 255, .3);
+    color: #000;
+
+}
+
+.button:disabled:hover{
+    background-color: rgba(255, 255, 255, .3);
+    color: #000;
+}
+
+.button:hover{
+    transition:  all 0.3s ease 0s;
+    background-color: #00ff00;
+    color: #FFF;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 1);
+}
+/* PAUSE MENU */
+.containerPause{
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 500px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.containerPause .button{
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+}
+/* MENU */
+.containerMenu{
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 600px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+    background-image: url("Assets/Textures/menuBackground.jpg");
+}
+
+.gameTitle{
+    display: block;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 60px;
+}
+
+.selectDinosaur{
+    display: block;
+    color: #ffffff;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+}
+
+.containerDinosaur{
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    margin: 10px;
+    height: 75%;
+    width: 45%;
+    border: solid;
+    border: black;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+backdrop-filter: blur(15px);
+}
+
+.dinosaurPreview{
+    margin: auto;
+    margin-top: 30px;
+    width: 60%;
+    height: 60%;
+}
+
+
+.dinosaurName{
+    font-family: 'Anton', sans-serif;
+    margin-top: 10px;
+    color: #ffffff;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+}
+
+.containerButtonSelectDino .button{
+    margin: 10px;
+    margin-top: 30px;
+    width: 50px;
+    height: 50px;
+}
+
+.mainButtonsContainer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    right: 0;
+    width: 45%;
+    height: 75%;
+}
+
+.mainButtonsContainer .button{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.inc{
+   margin: 15px; 
+   color: #ffffff;
+   font-family: 'Luckiest Guy', cursive;
+   text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+}
+
+.containerBlur{
+    
+}

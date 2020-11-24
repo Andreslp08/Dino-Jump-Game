@@ -1,0 +1,52 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>DINO JUMP!</title>
+</head>
+<body onload="init();"> 
+    <!-- MENU -->
+    <div class="containerMenu" id="mainMenu">
+        <p class="gameTitle">DINO JUMP!</p>
+        <p class="selectDinosaur">Select a dinosaur</p>
+        <div class="containerDinosaur">
+            <p class="dinosaurName" id="dinosaurName">T-Rex</p>
+            <img class="dinosaurPreview"  id="dinosaurPreview" src="Assets/Textures/Trex.png" alt="">
+            <div class="containerButtonSelectDino"> 
+                <button class="button" id="buttonLeft">◄</button>
+                <button class="button" id="buttonRight">►</button>
+            </div>
+        </div>
+        <div class="mainButtonsContainer">
+            <div>
+                <button class="button" id="buttonStart">Start game</button>
+                <button class="button" id="buttonExit">Exit</button>
+                <p class="inc">Sanson games Inc.</p>
+            </div>
+        </div>
+    </div>
+    <!-- CANVAS -->
+    <canvas class="canvas" id="canvas" width="600" height="600"></canvas>
+    <!-- HUD  -->
+    <div class="scoreContainer" id="scoreContainer">
+        <p class="scoreTitle">Score</p>
+        <p class="score" id="score">0</p>
+    </div>
+    <!-- GAME OVER MENU -->
+    <div class="containerGameOver" id="containerGameOver">
+        <p class="gameTitleMenu">GAME OVER</p>
+        <p class="gameOverScore" id="gameOverScore">Your score</p>
+        <button class="button" id="buttonRetry">Retry</button>
+        <button class="button" id="buttonBackToMenu">Menu</button>
+    </div>
+    <!-- PAUSE MENU -->
+    <div class="containerPause" id="containerPause">
+        <p class="gameTitleMenu">GAME PAUSED</p>
+        <button class="button" id="buttonContinue">Continue</button>
+        <button class="button" id="buttonBackToMenuP">Menu</button>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
